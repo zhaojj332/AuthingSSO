@@ -100,7 +100,9 @@ export class AuthingSSO {
     } = Object.assign({}, {
       scope: 'openid profile email phone',
       responseMode: 'fragment',
-      responseType: 'id_token token'
+      responseType: 'id_token token',
+      state: Math.random().toString(),
+      nonce: Math.random().toString(),
     }, options)
 
     let url = this.authzUrlBuilder
@@ -137,7 +139,9 @@ export class AuthingSSO {
     } = Object.assign({}, {
       scope: 'openid profile email phone',
       responseMode: 'fragment',
-      responseType: 'id_token token'
+      responseType: 'id_token token',
+      state: Math.random().toString(),
+      nonce: Math.random().toString(),
     }, options)
 
     let url = this.authzUrlBuilder
